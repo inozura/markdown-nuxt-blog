@@ -50,25 +50,30 @@
 
   export default {
 
-    async asyncData ({params, app}) {
-      const fileContent = await import(`~/contents/id/blog/${params.slug}.md`)
-      const attr = fileContent.attributes
-      return {
-        name: params.slug,
-        title: attr.title,
-        trans: attr.trans,
-        year: attr.year,
-        id: attr.id,
-        cardAlt: attr.cardAlt,
-        noMainImage: attr.noMainImage,
-        description: attr.description,
-        extraComponent: attr.extraComponent,
-        renderFunc: `(${fileContent.vue.render})`,
-        staticRenderFuncs: `[${fileContent.vue.staticRenderFns}]`,
-        image: {
-          main: attr.image && attr.image.main,
-          og: attr.image && attr.image.og
+    async asyncData ({params, app, redirect}) {
+      const content = require(`~/contents/id/blog/${params.slug}.md`)
+      if(params.slug == content.attributes.id) {
+        const fileContent = await import(`~/contents/id/blog/${params.slug}.md`)
+        const attr = fileContent.attributes
+        return {
+          name: params.slug,
+          title: attr.title,
+          trans: attr.trans,
+          year: attr.year,
+          id: attr.id,
+          cardAlt: attr.cardAlt,
+          noMainImage: attr.noMainImage,
+          description: attr.description,
+          extraComponent: attr.extraComponent,
+          renderFunc: `(${fileContent.vue.render})`,
+          staticRenderFuncs: `[${fileContent.vue.staticRenderFns}]`,
+          image: {
+            main: attr.image && attr.image.main,
+            og: attr.image && attr.image.og
+          }
         }
+      } else {
+        return redirect('/404')
       }
     },
 
@@ -88,9 +93,6 @@
           { property: "og:image", content: this.ogImage },
           { name: "twitter:description", content: this.description },
           { name: "twitter:image", content: this.ogImage }
-        ],
-        link: [
-          this.hreflang
         ]
       };
     },
@@ -104,7 +106,7 @@
         return `${process.env.baseUrl}/images/blog/${this.id}/_thumbnail.jpg`;
       },
       pageTitle () {
-        return this.title + ' – Novandra Zulfi Ramadhan';
+        return this.title + ' – iNozura';
       },
 
       extraComponentLoader () {

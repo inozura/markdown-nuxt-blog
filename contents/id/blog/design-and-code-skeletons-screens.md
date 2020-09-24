@@ -1,11 +1,10 @@
 ---
 name: 'design-and-code-skeletons-screens'
-trans: 'disena-programa-skeletons-screens'
 title: Design and code responsive Skeleton Screens
 year: 1 May 2019
 color: '#edece7'
 isTextColorDark: true
-noMainImage: true
+noMainImage: false
 extraComponent: 'Datatable'
 id: 'design-and-code-skeletons-screens'
 description: |

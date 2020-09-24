@@ -40,7 +40,7 @@
         title: this.$t('indexPageHead.title'),
         script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }],
         meta: [
-          { name: "author", content: "Marina Aisa" },
+          { name: "author", content: "Novandra Zulfi Ramadhan" },
           { name: "description", property: "og:description", content: this.$t('indexPageHead.description'), hid: "description" },
           { property: "og:title", content: this.$t('indexPageHead.title') },
           { property: "og:image", content: this.ogImage },

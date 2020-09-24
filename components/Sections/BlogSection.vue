@@ -1,5 +1,8 @@
 <template>
   <section>
+    <div class="brand">
+      <h1 style="text-align: right;">iNozura</h1>
+    </div>
     <div class="blogs__top">
       <div>
         <h2>{{ $t('posts') }}</h2>
@@ -27,6 +30,9 @@ export default {
 }
 </script>
 <style lang="scss">
+.brand {
+  margin-top: 2rem;
+}
 .blogs {
   margin: 0;
   
@@ -40,7 +46,7 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-top: 4rem;
+    margin-top: 2rem;
   }
 }
 </style>
