@@ -10,6 +10,7 @@
               </svg>
               {{ $t('comeBack') }}
             </nuxt-link>
+            <typed-logo :big="false" />
           </div>
           <div class="elevate-cover__left">
             <span class="blogSelected-year">{{ year }}</span>
@@ -46,7 +47,7 @@
 <script lang="js">
 
   import DynamicMarkdown from "~/components/Markdown/DynamicMarkdown.vue"
-
+  import TypedLogo from "~/components/TypedLogo.vue";
 
   export default {
 
@@ -81,7 +82,7 @@
       seo: false
     },
 
-    components: { DynamicMarkdown},
+    components: { DynamicMarkdown, TypedLogo },
 
     head () {
       return {

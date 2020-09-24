@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="brand">
-      <h1 style="text-align: right;">iNozura</h1>
+      <typed-logo />
     </div>
     <div class="blogs__top">
       <div>
@@ -19,9 +19,10 @@
 </template>
 <script>
 import BlogCard from "~/components/BlogCard.vue";
+import TypedLogo from "~/components/TypedLogo.vue";
 
 export default {
-  components: { BlogCard },
+  components: { BlogCard, TypedLogo },
   props: {
     blogs: {
       type: Array
@@ -46,7 +47,7 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 }
 </style>
