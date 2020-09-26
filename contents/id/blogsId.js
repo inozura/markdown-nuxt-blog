@@ -1,4 +1,4 @@
 export default [
-  // 'design-and-code-skeletons-screens',
+  'design-and-code-skeletons-screens',
   'install-rstudio-ubuntu',
 ]

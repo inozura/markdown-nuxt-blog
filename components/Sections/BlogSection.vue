@@ -1,6 +1,7 @@
 <template>
   <section>
-    <div class="brand">
+    <div class="brand flex justify-between content-center">
+      <nuxt-link class="inline-block uppercase" :to="{name: 'about___id'}">about</nuxt-link>
       <typed-logo />
     </div>
     <div class="blogs__top">

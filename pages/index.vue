@@ -15,6 +15,7 @@
     async asyncData ({app}) {
 
       const blogs = blogsId
+      console.log(blogs)
       
       async function asyncImport (blogName) {
         const wholeMD = await import(`~/contents/id/blog/${blogName}.md`)

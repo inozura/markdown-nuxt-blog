@@ -1,7 +1,7 @@
 {
-  "name": "nuxt-markdown-blog-starter",
-  "version": "1.0.0",
-  "author": "marinaaisa <marina@marinaaisa.com>",
+  "name": "my-mdblog",
+  "version": "1.1.0",
+  "author": "Novandra Zulfi Ramadhan",
   "private": true,
   "engines": {
     "node": ">=8.0.0",
@@ -24,6 +24,7 @@
     "analyze": "nuxt build --analyze"
   },
   "devDependencies": {
+    "@nuxtjs/tailwindcss": "^3.1.0",
     "frontmatter-markdown-loader": "^3.1.0",
     "node-sass": "^4.14.1",
     "responsive-loader": "^1.2.0",

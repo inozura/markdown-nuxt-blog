@@ -142,5 +142,7 @@ module.exports = {
       '/id', '404'
     ]
     .concat(getPaths('id', 'blog'))
-  }
+  },
+
+  buildModules: ['@nuxtjs/tailwindcss']
 }

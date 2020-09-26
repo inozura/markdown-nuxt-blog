@@ -8,7 +8,7 @@
   import Vue from "vue";
   // import Component from "nuxt-class-component";
 
-  const files = require.context("assets/icons", true, /\.svg$/);
+  const files = require.context("assets/icons", true, /\.png$/);
   files.keys().forEach(files);
 
   export default {
