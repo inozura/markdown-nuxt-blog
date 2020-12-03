@@ -23,4 +23,4 @@ You can see the demo on my personal blog website [Demo](https://inozura.netlify.
  2. run npm install or yarn in terminal
  3. done!
    
-Don't forget to gift star in this project and happy coding :D
+Don't forget to gift star in this project and happy coding :)
